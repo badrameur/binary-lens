@@ -1,0 +1,83 @@
+{
+  "title": "Measured Linux ELF results",
+  "dataset": "EMBER2024 / official ELF temporal split",
+  "description": "Both classifiers are evaluated on the same later, labeled test examples. These metrics use a 0.5 decision threshold; the app also has an uncertain range.",
+  "evaluated_at": "2026-10-21T20:11:55.589464+00:00",
+  "threshold": 0.5,
+  "test_samples": 5989,
+  "test_benign": 2989,
+  "test_malicious": 3000,
+  "train_duplicates_removed": 26000,
+  "test_duplicates_removed": 6011,
+  "training_test_overlap_removed": 0,
+  "features": 2568,
+  "student_training_parameters": {
+    "objective": "binary",
+    "metric": "binary_logloss",
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "min_data_in_leaf": 30,
+    "feature_fraction": 0.9,
+    "bagging_fraction": 0.9,
+    "bagging_freq": 1,
+    "num_threads": 2,
+    "seed": 42,
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1
+  },
+  "source_archives_sha256": {
+    "ELF_train.zip": "dd22c65c1a4b6b1c0680717814c74c1569256cf4ef6e7629c1b2b94b8e11afe3",
+    "ELF_test.zip": "c86fa72164d7ac5d47ac4798d27b65978402f39f8cad0b2186b01ba55d528bfe"
+  },
+  "pretrained_revision": "e5b945dd90e1a1a1ec0cc07b3a17b52e9ba2d0c2",
+  "models": [
+    {
+      "name": "Public pretrained ELF model (used by app)",
+      "description": "Published EMBER2024 classifier, evaluated on the official later test split.",
+      "accuracy": 0.9654366338286859,
+      "precision": 0.9517955354254287,
+      "recall": 0.9806666666666667,
+      "false_positive_rate": 0.049849447975911676,
+      "roc_auc": 0.9928835731013717,
+      "tn": 2840,
+      "fp": 149,
+      "fn": 58,
+      "tp": 2942,
+      "app_thresholds": {
+        "benign_max": 0.2,
+        "malicious_min": 0.8,
+        "uncertain_count": 168,
+        "decision_coverage": 0.9719485723827016,
+        "benign_labeled_malicious": 109,
+        "malware_labeled_benign": 47
+      }
+    },
+    {
+      "name": "Our CPU-trained ELF model (comparison)",
+      "description": "Trained from scratch on earlier training weeks; early stopping uses later training weeks, never the test split.",
+      "accuracy": 0.9408916346635499,
+      "precision": 0.9284326424870466,
+      "recall": 0.9556666666666667,
+      "false_positive_rate": 0.07393777183004349,
+      "roc_auc": 0.9857914575666333,
+      "tn": 2768,
+      "fp": 221,
+      "fn": 133,
+      "tp": 2867,
+      "app_thresholds": {
+        "benign_max": 0.2,
+        "malicious_min": 0.8,
+        "uncertain_count": 344,
+        "decision_coverage": 0.9425613624979129,
+        "benign_labeled_malicious": 106,
+        "malware_labeled_benign": 97
+      },
+      "training_samples": 20500,
+      "validation_samples": 5500,
+      "training_seconds": 29.789,
+      "trees": 250
+    }
+  ],
+  "limitations": "Linux ELF benchmark only. Windows predictions have integration checks, but no Windows benchmark was run in this experiment. Drivers and kernel modules were not evaluated separately. Benchmark labels may be imperfect; results do not guarantee performance on future files or new malware families. The public pretrained model's original training is trusted as documented by its authors."
+}

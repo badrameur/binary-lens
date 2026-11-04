@@ -1,0 +1,14 @@
+[
+  {
+    "sample": "python-launcher-win32.exe",
+    "http_status": 200,
+    "model": "EMBER2024_PE.model",
+    "score": 0.07957543050680008
+  },
+  {
+    "sample": "python-launcher-win64.exe",
+    "http_status": 200,
+    "model": "EMBER2024_PE.model",
+    "score": 0.0770465435687313
+  }
+]

@@ -1,0 +1,15 @@
+fastapi>=0.115,<1
+uvicorn>=0.34,<1
+python-multipart>=0.0.20,<1
+numpy>=2,<3
+lightgbm>=4.6,<5
+pefile==2024.8.26
+pyelftools>=0.32,<1
+scikit-learn>=1.5,<2
+signify==0.7.1
+polars>=1.8,<2
+tqdm>=4.66,<5
+huggingface-hub>=0.32,<2
+matplotlib>=3.10,<4
+httpx>=0.28,<1
+pytest>=8,<10

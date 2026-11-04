@@ -1,0 +1,14 @@
+{
+  "train": {
+    "rows": 52000,
+    "unique": 26000,
+    "duplicates": 26000,
+    "conflicting_labels": 0
+  },
+  "test": {
+    "rows": 12000,
+    "unique": 5989,
+    "duplicates": 6011,
+    "conflicting_labels": 0
+  }
+}

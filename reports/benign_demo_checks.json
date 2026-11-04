@@ -1,0 +1,42 @@
+[
+  {
+    "filename": "python-launcher-win32.exe",
+    "sha256": "47872cc77f8e18cf642f868f23340a468e537e64521d9a3a416c8b84384d064b",
+    "size": 91648,
+    "format": "PE",
+    "prediction_available": true,
+    "score": 0.07957543050680008,
+    "error": null,
+    "known_status": "benign sample; not evidence of detection accuracy"
+  },
+  {
+    "filename": "python-launcher-win64.exe",
+    "sha256": "7a319ffaba23a017d7b1e18ba726ba6c54c53d6446db55f92af53c279894f8ad",
+    "size": 101888,
+    "format": "PE",
+    "prediction_available": true,
+    "score": 0.0770465435687313,
+    "error": null,
+    "known_status": "benign sample; not evidence of detection accuracy"
+  },
+  {
+    "filename": "hello-linux.elf",
+    "sha256": "1cf0968fb389bddc4ff01fb75fe2abf027159843d3ff1a94fc98c2575cfa5236",
+    "size": 15968,
+    "format": "ELF",
+    "prediction_available": true,
+    "score": 0.8146220925391543,
+    "error": null,
+    "known_status": "benign sample; not evidence of detection accuracy"
+  },
+  {
+    "filename": "system-true.elf",
+    "sha256": "8398af7d1f94a88be3303caa083616ad22a12783e4dfee0373298bc61aef0662",
+    "size": 43320,
+    "format": "ELF",
+    "prediction_available": true,
+    "score": 5.2088252197235934e-05,
+    "error": null,
+    "known_status": "benign sample; not evidence of detection accuracy"
+  }
+]
