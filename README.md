@@ -4,12 +4,12 @@ A working, explainable static malware classifier for Windows PE and Linux ELF
 files. Built as a school project with Python, LightGBM and a plain JavaScript
 interface. Training and inference use the CPU; Gemini and a GPU are not required.
 
-## Start on this computer
+## Start on Linux (x86_64)
 
-The environment and models have already been installed in this directory.
+On a fresh clone, install the local environment, then start the server:
 
 ```bash
-cd /home/orion/Work/binary-lens
+bash setup.sh
 bash run.sh
 ```
 
